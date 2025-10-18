@@ -54,10 +54,108 @@
 						<div class="inner">
 							<p><a href="index.html" class="back-link" aria-label="Back to home">&larr; Back</a></p>
 							<h1>LEVEL DESIGN ASSIGNMENT 2</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							
+							<!-- Brief section -->
+							<section class="brief constrained-large">
+								<h2><u>Brief</u></h2>
+								<div id="brief" aria-readonly="true" tabindex="-1" style="color:#333;white-space:normal;padding:0.25rem 0;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
+With the skills you have acquired from the lectures and lab sessions, develop a video game level which can be used in a modern first-person 3D game using the Unreal Engine version as installed in the labs. You do not have to base this work on the LDD you submitted for A1, although you are free to do that if you want to. You must submit an 8-minute video in which you show your map & present and explain the design choices and features, this can be done via either on-screen text or narration as you see fit. A variety of content packs have been provided, you are not expected to make your own models for this assignment.
+<br>This assignment is worth 70% of your overall unit grade.
+								</div>
+							</section>
+							<!-- Collapsible Detailed Brief -->
+							<section class="constrained-tight">
+								<details>
+									<summary style="cursor:pointer;font-weight:700;margin-bottom:0.5rem;">Detailed Brief</summary>
+									<div style="margin-top:0.5rem;">
+										<div id="detailed-brief" aria-readonly="true" tabindex="-1" style="width:100%;min-height:10rem;padding:0.75rem;font-family:inherit;color:#333;white-space:normal;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
+											<ol style="margin:0 0 0 1.25rem;padding:0 0 0 0;">
+												<li style="margin-bottom:0.5rem;">Mode of Play & Theme
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														<li style="margin-bottom:0.25rem;">Your map must be a 3D game environment created in the Unreal Engine version as installed in the PGB labs.</li>
+														<li style="margin-bottom:0.25rem;">Your map must be designed for single-player or multi-player gameplay and must be experienced from a first-person on-foot perspective (as opposed to, for example, driving a car in first-person). Do not try to design an entire open world, something that represents 30 minutes of gameplay is sufficient.</li>
+														<li style="margin-bottom:0.25rem;">You must choose a specific environment and location for your map to be based in (castle, office, spaceship, etc), and apply appropriate stylings suitable to the chosen location and any themes (horror, war, summer, etc). Your choice of theme will be somewhat constrained by the availability of assets (see “Meshes” below).</li>
+														<li style="margin-bottom:0.25rem;">You cannot simply modify an example map that comes with any content pack and then hand that in, the map must be your own work. As per section 2 below, you should obtain assets for your map from content packs provided via Brightspace but the arrangement, structure, and composition must be original.</li>
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;">Meshes<br>Content packs containing meshes are available for free via the Epic Games launcher or from the collection curated by the unit leader, available on Brightspace. You are not expected to make your own models for this assignment. Any block-out geometry should be replaced with meshes. Your map should feature static meshes utilised in the following ways:
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														<li style="margin-bottom:0.25rem;">Major structural components that define the overall layout of the map. Examples: walls, floors, buildings, bulkheads.</li>
+														<li style="margin-bottom:0.25rem;">Minor structural components that fill out the map. Examples: furniture, vehicles, trees, containers.</li>
+														<li style="margin-bottom:0.25rem;">Decoration and clutter to detail your map. Examples: small foliage items, ground clutter, items on desks.</li>
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;">Lighting<br>Your map should be professionally lit using the techniques covered in the labs.
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														<li style="margin-bottom:0.25rem;">Any outdoor areas should be lit according to the time of day, with an appropriate skydome.</li>
+														<li style="margin-bottom:0.25rem;">Lights placed around the map should have an appropriate mesh to represent the source (light fitting, alert siren light, etc).</li>
+														<li style="margin-bottom:0.25rem;">You should utilise different light types (spot, point, rect, sky, directional) as needed, and light colors appropriate to the scene.</li>
+														<li style="margin-bottom:0.25rem;">If you choose to make a night-time scene then your lighting should be such that the player can still see what they are doing, same if you have a day/night cycle.</li>
+														<li style="margin-bottom:0.25rem;">It should be possible for the player to see what they are doing while navigating your map. The use of shadows and darkness is an important part of level design, but the level should be legible.</li>
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;">Materials<br>Your map should be fully detailed with materials applicable to the meshes and surfaces present. The content packs available (see “2”, above) will include meshes with materials and standalone materials provided that can be applied to walls, floors, landscape. No surfaces in your map should be left with the default Unreal Engine material.
+												</li>
+												<li style="margin-bottom:0.5rem;">Presentation / Effects<br>To create a professional looking map you should:
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														<li style="margin-bottom:0.25rem;">Make sure the player cannot get out of bounds.</li>
+														<li style="margin-bottom:0.25rem;"> Place surrounding geometry to represent the wider environment in which the level is located (landscape, ocean, city buildings, space, etc). The player does not need to be able to reach this geometry, it is there for purely aesthetic reasons.</li>
+														<li style="margin-bottom:0.25rem;">Make use of particle effects and post-processing as applicable.</li>
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;">Scripted Elements<br>Your level should feature 3 scripted elements (i.e., Blueprint, since this is in Unreal Engine) of your own design and implementation. These can add passive effects to the map 	(e.g. day/night cycle), or player driven interactions (e.g. shootable targets). The lab sessions will give you extensive knowledge on how to implement Blueprint scripted elements, but you cannot simply hand in the example scripts given out in the labs.
+												</li>
+												<li style="margin-bottom:0.5rem;">Submission<br>You must submit an 8-minute video which shows your map fully and shows the scripted elements working. The video should be in H.264 mp4 format, 1080p resolution, and playable on a standard installation of VLC media player such as is installed in the labs. Your video should use either on-screen text or voice narration to present and explain the following aspects of your level (approximately 1 minute to cover each of the points 1-5, and approximately 2 minutes to cover point 6).
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														<li style="margin-bottom:0.25rem;">The use of materials in your map.</li>
+														<li style="margin-bottom:0.25rem;">The use of lighting types, colours, etc in your map.</li>
+														<li style="margin-bottom:0.25rem;">The intended game mode and theme(s), and how your map supports these.</li>
+														<li style="margin-bottom:0.25rem;">The use of static meshes in constructing your map (structural, decorative, foliage, etc).</li>
+														<li style="margin-bottom:0.25rem;">The use of any special aesthetic effects (particles, post-processing, surrounding environment).</li>
+														<li style="margin-bottom:0.25rem;">The scripted elements you created, what they do, how they work, and why they are suitable for your map.</li>
+													</ol>
+												</li>
+											</ol>
+										</div>
+                                        
+                                        </div>
+									</div>
+								</details>
+							</section>
+							<!-- Video embed for LDF1 -->
+							<section class="constrained-large">
+								<h2><u>Submission:</u></h2>
+								<h2>Full:</h2>
+								<video width="960" height="540" controls>
+  									<source src="videos/RM-LDF-A2.mp4" type="video/mp4">
+  									Your browser does not support the video tag.
+								</video><br><br>
+								<h2>Cinematics:</h2>
+								<video width="960" height="540" controls>
+  									<source src="videos/RM-LDF.mp4" type="video/mp4">
+  									Your browser does not support the video tag.
+								</video>
+							</section>
+							<section class="constrained-large">
+								<h2><u>Results Summary:</u></h2>
+								<p>On this assignment I received a mark of 79/100, which gave me a final result of 78.4 for Level Design Fundamentals. I am pleased with this result, as I feel my level design skills have improved since the first assignment. If I were to redo this assignment, I would try to add an interactable Capture The Flag gamemode.
+
+<br><h3><u>Lecturer Feedback:</u></h3>
+Riley, you have successfully submitted your Level Design Fundamentals assignment. The submission is to specification. Below is detailed feedback based on the marking scheme:
+
+<br><br><u>Implementation of Game Level as Presented and Explained in Video (31.5/40) </u><br>
+First of all, let me say that this is an excellent submission for LDF A2. Very well done. Your use of materials is great. All of the materials work well together in the map; they suit the narrative of the place with the wood coming from the surrounding forest, and also fit the theme of the map. You could have used some decals to add more surface detail, but what you have here looks great. The lighting is handled well, creating a nighttime scene that is well-illuminated, allowing players to see clearly. You have made good use of light types and colours, with each light having a corresponding in map source. The shootable lanterns are a nice touch too. The capture the flag game mode is supported very well by the rotationally-symmetric layout that you have implemented, featuring three main lanes and ways of switching between them. You also have the towers on either side, as well as multiple routes available away from the flag locations. You make good use of elevation throughout the map. Mesh utilisation is of a similarly high standard, with every area looking fully detailed and decorated in addition to the structural work. All the meshes you have chosen work well together in the scene. Effective use of particles and sound effects to enhance the map. I like that you have taken care with the surrounding scenery, adding dynamic elements outside the map extents. It appears that the player cannot get 	out of bounds. 
+<br><br><u>Blueprints (8/10)</u><br>
+All the Blueprints that you have made suit the map, mode, and theme very well. The interaction system effectively utilises a BP Interface to enable the player to interact with various objects in their own unique ways; it's a nice touch that openable doors and shutters have a variable to control how far they open. Also good that you include the UI circle to show that something can be interacted with. The ladders add some extra movement options for the player, as do the crouch/sprint functionality. The minimap system is perfectly suited for the game mode and is well-implemented. You don’t really need the level streaming system in a multiplayer map like this, and it could even cause issues if a player can, for example, see through a distant door or shutter into a room that is not loaded.
+<br><br><u>Knowledge and understanding of level design principles (24.5/35)</u><br>
+You recall several aspects of relevant level design theory, and explain how you implemented the theories in your design. The three-lane layout with rotational symmetry is great for the mode, and the flag areas seem to have multiple ways in and out that should not make them either too hard to attack or to defend. You have thought about how cover and sightlines affect gameplay in a map like this too. I like that you discuss the use of lighting not only for illumination, but also to set the mood.
+<br><br><u>Adherence to Assignment Specification & Transferable skills (15/15)</u><br>
+The video is submitted in the correct format and is within the brief's length bounds. All aspects of the design are discussed in detail, narration is very clear, and the video editing is excellent.
+<br><br> Feed Forward Suggestions:
+<br>(i) Use decals to add extra surface details.
+<br>(ii) Look into other types of VFX such as post-processing, colour grading, etc.
+<br>(iii) Continue to develop your scripting skills (Blueprint, in this case). </p>
+							</section>
 						</div>
 					</div>
 
@@ -75,10 +173,11 @@
 								</ul>
 							</section>
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Riley McGee. 2025</li>
 							</ul>
 						</div>
 					</footer>
+
 
 			</div>
 
