@@ -80,26 +80,53 @@ concept sketches, a mood board and a block out of the level. You must submit a 6
 									<div style="margin-top:0.5rem;">
 										<div id="detailed-brief" aria-readonly="true" tabindex="-1" style="width:100%;min-height:10rem;padding:0.75rem;font-family:inherit;color:#333;white-space:normal;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
 											<ol style="margin:0 0 0 1.25rem;padding:0 0 0 0;">
-												<li style="margin-bottom:0.5rem;">You should include a comprehensive set of reference images. These can include (but are not limited to) photographs, digital art, screenshots, and concept sketches. Images can be created by yourself or sourced from other media (screenshots from games/TV/film). Your images should convey:
+												<li style="margin-bottom:0.5rem;">The assignment is to be completed using the unity game engine. These are the basic features of the game:
 													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">Environment – the broad area in which your map is located (city, caves, the arctic, etc)</li>
-														<li style="margin-bottom:0.25rem;">Location - If environment (a) is “city” then location could be office block, subway, streets, etc.</li>
-														<li style="margin-bottom:0.25rem;">Theme(s) – Unifying ideas that tie everything together such as horror, sci-fi, abandoned, war, winter, cyberpunk, the 1980s, etc.</li>
-														<li style="margin-bottom:0.25rem;">Lighting references. Images that give an overall feel as to how the map would be lit.  As examples, if your map is set at dawn then you would include photographs of theme	appropriate locations under dawn lighting, or a map set in a space-station undergoing an emergency may have bright red “siren” lights and other warning lights.</li>
+														<li style="margin-bottom:0.25rem;">The goal of the game is to hit all blue capsules.</li>
+														<li style="margin-bottom:0.25rem;">The level consists of 3 round platforms that hold the targets positioned at different hights roughly positioned as shown.</li>
+														<li style="margin-bottom:0.25rem;">Blue capsules are targets, and are destroyed by contact with the red ball or falling off the platform.</li>
+														<li style="margin-bottom:0.25rem;">Green capsules give you 3 extra shots when hit by the red ball.</li>
+														<li style="margin-bottom:0.25rem;">Randomly positioned objects also populate the platforms, shown here as white blocks.</li>
+														<li style="margin-bottom:0.25rem;">All objects are subject to physics and can be knocked over.</li>
+														<li style="margin-bottom:0.25rem;">The ball is always fired from the launch pad.</li>
 													</ol>
 												</li>
-												<li style="margin-bottom:0.5rem;">You should include top-down layouts of your map. These can either be created by hand and scanned in or created entirely digitally. You should make sure these are presented effectively and are legible, blurry phone photos of pencil sketches tend not to be!
+												<li style="margin-bottom:0.5rem;">The red ball respawns to the launch pad when:
 													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">For a map like a shipping yard you may only need one overall layout, but for a map set in an office block you would need to create the layout of every floor the player(s) can traverse. A map set inside a building would have rooms & corridors delineated whereas a map in a cave system would be more freeform looking.</li>
-														<li style="margin-bottom:0.25rem;">Your layouts should be appropriately annotated with details (depending on the game mode) like spawn points, pickups, enemies, cutscene triggers, boss encounters, capture points and so on.</li>
-													</ol>
+														<li style="margin-bottom:0.25rem;">It hits a blue target capsule.</li>
+														<li style="margin-bottom:0.25rem;">It misses the platforms.</li>
+														<li style="margin-bottom:0.25rem;">More than 10 seconds after the launch has elapsed.</li>
+														<li style="margin-bottom:0.25rem;">There are only 10 shots initially. The game ends once the number of shots reaches 0.</li>
+														</ol>
 												</li>
-												<li style="margin-bottom:0.5rem;">The text of your LDD (600 words +/- 10%, maximum 10 pages):
+												<li style="margin-bottom:0.5rem;">The ball's elevation (degrees 0-89), rotation angle (degrees left -ve or degrees right +ve), and power (0 - 10) should be set before the ball is fired (SPACE BAR).</li>
+												<li style="margin-bottom:0.5rem;">There should be GUI showing the following features:
 													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">Should describe and discuss the environment/location/theme of your map.</li>
-														<li style="margin-bottom:0.25rem;">Should introduce the intended mode of play (single / multiplayer) and discuss how your map supports this mode of play via its design. Discussion for a campaign map will include campaign specific concepts like player objectives and enemy encounters, whereas a deathmatch LDD would discuss spawn locations, cover, lines of sight, etc. The two examples given are not exhaustive lists of things to discuss, and the concepts you will need to cover will vary from mode to mode.</li>
-														<li style="margin-bottom:0.25rem;">Should identify and explain level design theory relevant to your map.  Throughout your work, you should explain and justify the design decisions you have made in terms of level design theory and best practice. Ideally, you should compare multiple level design theories/patterns, explaining which work for you and which don’t.</li>
-														<li style="margin-bottom:0.25rem;">A references section, listing any referenced sources (academic literature, games, books) in BU Harvard format. References are not included in the word count.</li>
+														<li style="margin-bottom:0.25rem;">Shots left</li>
+														<li style="margin-bottom:0.25rem;">Targets left</li>
+														<li style="margin-bottom:0.25rem;">Elevation angle (in degrees)</li>
+														<li style="margin-bottom:0.25rem;">Horizontal angle (in degrees)</li>
+														<li style="margin-bottom:0.25rem;">Power 0-10</li>
+														<li style="margin-bottom:0.25rem;">A way to exit the game (essential for the executable), i.e. a button or which key to press.</li>
+														</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;">The game can be given a theme, such as cyberpunk, medieval, steampunk, etc using free asset 
+packs. You can also add VFX and audio FX and music. The basic assets should also be replaced 
+with free downloadable assets. Please make sure the controls and targets of the game are clearly 
+explained by a splash screen or list in the GUI.</li>
+
+
+												<li style="margin-bottom:0.5rem;">You must submit the following items for assessment:
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														<li style="margin-bottom:0.25rem;">The GDD document (based on the template provided).</li>
+														<li style="margin-bottom:0.25rem;">A 6-minute narrated video demonstrating all features of the game created (.MP4, HD) 
+video clearly showing each of the various features of the game working and how they 
+were implemented. Clearly also show and describe any advanced features you have 
+added.</li>
+														<li style="margin-bottom:0.25rem;">A Windows build of the game (executable)</li>
+														<li style="margin-bottom:0.25rem;">The Unity project game folder (zipped) 
+(The library folder should not be included. This should be tested on a separate PC from the 
+one it was created on).</li>
 													</ol>
 												</li>
 											</ol>
@@ -123,21 +150,26 @@ concept sketches, a mood board and a block out of the level. You must submit a 6
 							</section>
 							<section class="constrained-large">
 								<h2><u>Results Summary:</u></h2>
-								<p>On this assignment I received a mark of 77/100, which I am very pleased with, as it was my first time designing a level. If I were to redo this assignment, I would try to focus on the area surrounding the level a bit more - as long as I am able to fit within the word count.
+								<p>On this assignment I received a mark of 76.7/100, which I am very pleased with, as it was my first time using unity. If I were to redo this assignment, I would like to try create a script for the targets to move about on the platform as well as decorate the background area.
 
-<br><h3><u>Lecturer Feedback:</u></h3>
-Riley, you have successfully submitted your interface design assignment. The submission is to specification. Below is detailed feedback based on the marking scheme:
-<br><br><u>Knowledge & Understanding of Level Design Principles (31/40)</u><br>
-An excellent submission. Theory is effectively integrated to support reference images, which are clear and convey the design intent with precision. The well-structured approach 	ensures that theoretical knowledge underpins design decisions, enhancing credibility and professionalism.
-<br><u>Application of Level Design Theory (37/50)</u><br>
-The layouts are exceptionally clear, and design decisions are explored in depth. The inclusion of citations further strengthens the credibility of the work. The exploration of play 	experience through movement and intensity maps, as well as considerations of cover and sightlines, significantly enhances the quality and professionalism of the assignment. 	This is a highly polished and well-developed submission. Well done!
-<br><u>Transferable Skills (9/10 marks)</u><br>
-All references are correctly formatted, and the assignment demonstrates clear, well-informed discussion. Images are effectively supported by text and citations, ensuring a highly professional standard throughout. Overall, this is an outstanding piece of work.
+									<br><h3><u>Lecturer Feedback:</u></h3>
+									<br><br><u>Implementation of the basic game mechanics. (Mark: 77% - Weighting: 30%)</u><br>
+									You have implemented all the required features, plus some more advanced features like multiple levels, the ball container, etc. Good randomisation of platforms, target, and scenery too.
+									<br><u>The quality of the C# scripting,structure and commenting. (Mark: 70% - Weighting: 10%)</u><br>
+									Good coding and excellent commenting. There are places where you could use a loop instead of multiple of the same statements, like in the TreeSpawn() function.
+									<br><u>Game environment design, audio and VFX features. (Mark: 67% - Weighting: 30%)</u><br>
+									Good use of custom meshes for the targets, objects, and scenery. Great VFX/audio for the cannon firing effect.
+									<br><u>GDD (planning, design and organization). (Mark: 90% - Weighting: 20%)</u><br>
+									Your GDD gives excellent, detailed information about the design, planning, and implementation of your game.
+									<br><u>Video structure and communication of information and quality of video and audio. (Mark: 85% - Weighting: 10%)</u><br>
+									Your video shows all the required information about the game and the features you implemented for it. Nice video editing, and great narration throughout.
+									<br>Final Mark: 76.7%
 
-<br><br> Feed Forward Suggestions:
-<br>(i) The integration of theory and reference images is excellent - continue to apply this approach in future projects.
-<br>(ii) Maintain the high standard of exploration into play experience through movement and intensity maps.
-<br>(iii) Keep refining your professional presentation and citation practices, as they are already at an excellent level. mprove document structure and formatting to enhance clarity and professional presentation.</p>
+									<br><br> Feed Forward Suggestions:
+									<br>(i) Where possible in code, use loops instead of multiple of the same statements.
+									<br>(ii) Experiment with things like animated meshes.
+									<br>(iii) Include more types of VFX (hit effects, etc).
+								</p>
 							</section>
 						</div>
 					</div>
