@@ -2827,27 +2827,27 @@ input, select, textarea {
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
+				background-color: #666666;
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #7ecaf6;
+				background-color: #666666;
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #7bd0c1;
+				background-color: #666666;
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9b;
+				background-color: #666666;
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #ae85ca;
+				background-color: #666666;
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #8499e7;
+				background-color: #666666;
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -2929,7 +2929,6 @@ input, select, textarea {
 
 		}
 
-/* Project notes removed; tiles will display in the .tiles flex/grid above */
 
 /* Highlights: a compact, single-row variant of .tiles for featured projects */
 .highlights.tiles {
@@ -2944,9 +2943,6 @@ input, select, textarea {
 .highlights.tiles {
 	grid-auto-flow: column;
 }
-
-
-
 
 
 
@@ -2965,7 +2961,7 @@ input, select, textarea {
 	position: absolute;
 	top: 0.75rem;
 	left: 0.75rem;
-	background: #f2849e;
+	background: #34a4ff;
 	color: #fff;
 	font-weight: 700;
 	font-size: 0.75rem;
@@ -2991,6 +2987,20 @@ input, select, textarea {
 .highlights .badge:hover {
 	transform: scale(1.08);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* About section */
 .about {
