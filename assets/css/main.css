@@ -2687,6 +2687,13 @@ input, select, textarea {
 		}
 
 
+
+
+
+
+
+
+
 /* Tiles (CSS Grid) */
 
     .tiles {
@@ -2930,11 +2937,25 @@ input, select, textarea {
 		}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Highlights: a compact, single-row variant of .tiles for featured projects */
 .highlights.tiles {
 	display: grid;
 	/* three flexible columns that can shrink to fit the container */
 	grid-template-columns: repeat(3, minmax(0, 1fr));
+	
 	gap: clamp(0.75rem, 2.5vw, 2.5rem);
 	margin-bottom: 2.5em; /* create separation from main tiles */
 }
@@ -2943,7 +2964,6 @@ input, select, textarea {
 .highlights.tiles {
 	grid-auto-flow: column;
 }
-
 
 
 .highlights article {
@@ -2956,12 +2976,29 @@ input, select, textarea {
 	display: block;
 }
 
+
 /* Badge for featured highlights */
-.highlights .badge {
+.highlights .badgefeatured {
 	position: absolute;
 	top: 0.75rem;
 	left: 0.75rem;
 	background: #34a4ff;
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.75rem;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	z-index: 6; /* above tile overlay (which was z-index:3 for link and 2 for image overlay) */
+	box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+	transform-origin: left center;
+	animation: badge-pop 550ms cubic-bezier(.2,1.1,.3,1) both;
+}
+
+.highlights .badgeuniversity {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	background: #ff4747;
 	color: #fff;
 	font-weight: 700;
 	font-size: 0.75rem;
@@ -2995,7 +3032,79 @@ input, select, textarea {
 
 
 
+.grid.tiles{
+display: grid;
+	/* three flexible columns and rows that can shrink to fit the container */
+	grid-template-rows: repeat(3, minmax(0,1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: clamp(0.75rem, 2.5vw, 2.5rem);
+	margin-bottom: 2.5em; /* create separation from main tiles */
+}
 
+/* Keep tiles on one line: allow items to shrink but prevent wrapping to new rows */
+.grid.tiles {
+	grid-auto-flow: row;
+}
+
+
+.grid article {
+	min-width: 0; /* allow flex/shrink behavior inside grid */
+}
+
+.grid article .image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+/* Badge for featured tiles */
+.grid .badgefeatured {
+	position: absolute;
+	top: 0.75rem;
+	left: 0.75rem;
+	background: #34a4ff;
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.75rem;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	z-index: 6; /* above tile overlay (which was z-index:3 for link and 2 for image overlay) */
+	box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+	transform-origin: left center;
+	animation: badge-pop 550ms cubic-bezier(.2,1.1,.3,1) both;
+}
+
+.grid .badgeuniversity {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	background: #ff4747;
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.75rem;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	z-index: 6; /* above tile overlay (which was z-index:3 for link and 2 for image overlay) */
+	box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+	transform-origin: left center;
+	animation: badge-pop 550ms cubic-bezier(.2,1.1,.3,1) both;
+}
+
+.grid article {
+	position: relative; /* ensure badge positions relative to article */
+}
+
+/* badge pop-in keyframes and hover */
+@keyframes badge-pop {
+	0% { transform: scale(0.6) translateY(-6px); opacity: 0; }
+	60% { transform: scale(1.05) translateY(0); opacity: 1; }
+	100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.grid .badge:hover {
+	transform: scale(1.08);
+}
 
 
 
