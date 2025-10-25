@@ -2837,25 +2837,7 @@ input, select, textarea {
 				background-color: #666666;
 			}
 
-			.tiles article.style2 > .image:before {
-				background-color: #666666;
-			}
-
-			.tiles article.style3 > .image:before {
-				background-color: #666666;
-			}
-
-			.tiles article.style4 > .image:before {
-				background-color: #666666;
-			}
-
-			.tiles article.style5 > .image:before {
-				background-color: #666666;
-			}
-
-			.tiles article.style6 > .image:before {
-				background-color: #666666;
-			}
+			
 
 			body:not(.is-touch) .tiles article:hover > .image {
 				-moz-transform: scale(1.1);
@@ -2998,7 +2980,7 @@ input, select, textarea {
 	position: absolute;
 	top: 0.75rem;
 	right: 0.75rem;
-	background: #ff4747;
+	background: #1cbb29;
 	color: #fff;
 	font-weight: 700;
 	font-size: 0.75rem;
@@ -3079,7 +3061,7 @@ display: grid;
 	position: absolute;
 	top: 0.75rem;
 	right: 0.75rem;
-	background: #ff4747;
+	background: #1cbb29;
 	color: #fff;
 	font-weight: 700;
 	font-size: 0.75rem;
@@ -3105,7 +3087,6 @@ display: grid;
 .grid .badge:hover {
 	transform: scale(1.08);
 }
-
 
 
 
