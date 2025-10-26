@@ -3134,8 +3134,8 @@ display: grid;
 }
 
 .about-image img {
-	width: 192px;
-	height: 192px;
+	width: 384px;
+	height: 384px;
 	object-fit: cover;
 	border-radius: 50%;
 	display: block;
