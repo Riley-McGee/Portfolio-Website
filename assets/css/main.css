@@ -3014,6 +3014,25 @@ input, select, textarea {
 
 
 
+
+
+
+
+
+
+.centre{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+
+
 .grid.tiles{
 display: grid;
 	/* three flexible columns and rows that can shrink to fit the container */
