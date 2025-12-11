@@ -31,14 +31,17 @@
 	width: 50px;
 	padding: 0px;
 	border-radius: 50%;
-	background-color: --var(--bg-color);
+	/* use CSS variable correctly and give a visible background */
+	background-color: var(--bg-color);
+	border: 1px solid var(--icon-style-border);
+	box-shadow: 0 6px 14px rgba(0,0,0,0.10);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 20px;
-	left: 20px;
-	z-index: 4;
+	top: 10px; /* bring to the very top */
+	left: 80px; /* swapped: place theme switch to the right */
+	z-index: 9999; /* ensure nothing overlaps */
 }
 #theme-switch svg {
 	position: absolute;
@@ -55,6 +58,56 @@
 
 .darkmode #theme-switch svg:last-child {
 	display: block;
+}
+
+/* Home button styling - sits beside the theme switch */
+
+#home-button {
+	height: 50px;
+	width: 50px;
+	padding: 0px;
+	border-radius: 50%;
+	background-color: var(--bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 10px; /* align with theme switch */
+	left: 20px; /* swapped: home now on the left */
+	z-index: 9999; /* ensure nothing overlaps */
+	text-decoration: none;
+	color: var(--txt-color);
+	border: 1px solid var(--icon-style-border);
+	box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+	transition: border-color 0.15s ease, transform 0.12s ease;
+}
+#home-button svg {
+	position: absolute;
+	fill: var(--txt-color);
+	stroke: var(--txt-color);
+}
+#home-button:hover {
+	border-color: var(--icon-style-hover);
+	transform: translateY(-2px);
+}
+
+/* Ensure the buttons are keyboard-focusable and visible when focused */
+#theme-switch:focus, #home-button:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(52,164,255,0.12), 0 6px 14px rgba(0,0,0,0.10);
+	transform: translateY(-2px);
+}
+
+/* Underline the "About Me" title link on the home page only on hover */
+#main .about .about-text h2 .back-link {
+	text-decoration: none;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 2px;
+	font-weight: 700;
+}
+
+#main .about .about-text h2 .back-link:hover {
+	text-decoration: underline;
 }
 
 
