@@ -3651,7 +3651,7 @@ display: grid;
 				text-align: center; /* center copyright across all pages */
 				list-style: none;
 				font-size: 0.78em; /* small reduction for visual parity */
-				color: rgba(88, 88, 88, 0.5);
+				color: --txt-color;
 			}
 
 				#footer > .inner .copyright a {
