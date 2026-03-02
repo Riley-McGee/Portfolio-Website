@@ -69,16 +69,15 @@
 							<section class="brief constrained-large">
 								<summary style="font-weight:700;margin-bottom:0.5rem;">Brief</summary>
 								<div id="brief" aria-readonly="true" tabindex="-1" style="color:var(--txt-color);white-space:normal;padding:0.25rem 0;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
-									Your task is to design and develop a game that is played by firing the red ball at the blue capsule 
-									targets. The blue capsule targets are distributed randomly around the three round levels (there 
-									must be some target capsules on each level). You control the elevation, horizontal angle and 
-									power with which the red ball is fired. When all of the blue targets have been hit or knocked from 
-									the platforms you have won the game. You initially only have 10 shots, however hitting the green 
-									capsules will give you an additional 3 shots. If you run out of shots before eliminating all of the blue 
-									capsules you lose the game.  
-									
-									<br>You will initially design the game using the game design document (GDD) which will include the 
-									concept sketches, a mood board and a block out of the level. You must submit a 6-minute narrated video demonstrating all the features of your game, as well as a windows executable build of the game.
+									There are three main parts for this assignment:
+									<br>1. Production of a portfolio of sounds suitable for a game environment, using audio
+									files obtained from audio libraries and at least one file recorded by yourself.
+									<br>2. Integration of the sounds within a Unity game environment.
+									<br>3. Creation of a video that demonstrates the sounds within the game environment
+									with a video report that discusses how the portfolio of sounds was created.
+									<br>You must select one of the game environments from the two options provided, create
+									your portfolio of sounds for use in that game environment, and integrate the sounds into
+									that game environment.
 
 									<br>This assignment is worth 100% if of you overall unit grade.
 								</div>
@@ -90,57 +89,183 @@
 									<div style="margin-top:0.5rem;">
 										<div id="detailed-brief" aria-readonly="true" tabindex="-1" style="width:100%;min-height:10rem;padding:0.75rem;font-family:inherit;color:var(--txt-color);white-space:normal;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
 											<ol style="margin:0 0 0 1.25rem;padding:0 0 0 0;">
-												<li style="margin-bottom:0.5rem;">The assignment is to be completed using the unity game engine. These are the basic features of the game:
+												<li style="margin-bottom:0.5rem;"><u>Portfolio of sounds:</u>
 													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">The goal of the game is to hit all blue capsules.</li>
-														<li style="margin-bottom:0.25rem;">The level consists of 3 round platforms that hold the targets positioned at different hights roughly positioned as shown.</li>
-														<li style="margin-bottom:0.25rem;">Blue capsules are targets, and are destroyed by contact with the red ball or falling off the platform.</li>
-														<li style="margin-bottom:0.25rem;">Green capsules give you 3 extra shots when hit by the red ball.</li>
-														<li style="margin-bottom:0.25rem;">Randomly positioned objects also populate the platforms, shown here as white blocks.</li>
-														<li style="margin-bottom:0.25rem;">All objects are subject to physics and can be knocked over.</li>
-														<li style="margin-bottom:0.25rem;">The ball is always fired from the launch pad.</li>
+														<li style="margin-bottom:0.25rem;">When you have selected your chosen game environment you should plan your portfolio
+															of sounds to match the overall aesthetic of your chosen game environment and the
+															atmosphere you want to create.</li>
+														<li style="margin-bottom:0.25rem;">You can use existing audio clips found on the internet and audio from the sound libraries
+															that are free to download, as long as they are used as building blocks to create your own
+															sounds. Do not submit sounds that have not been substantially edited by yourself (i.e. it
+															is not sufficient to submit whole or extracts from existing sounds, but you should create
+															your own unique sounds by blending several audio clips, as appropriate, and applying
+															suitable audio effects).</li>
+														<li style="margin-bottom:0.25rem;">At least one of the audio clips used in the creation of the portfolio of sounds must be one
+															that you have recorded by yourself using the Zoom handheld audio recorder, or
+															equivalent device.</li>
+														<li style="margin-bottom:0.25rem;">You must use Audacity to edit the Portfolio of sounds.</li>
+														<li style="margin-bottom:0.25rem;">The portfolio of sounds must contain the following three menu button click sounds for the game GUI:
+															<br>1 - Button down / pressed
+															<br>2 - Button up / released	
+															<br>3 - Button hover / mouseover
+
+														</li>
+														<li style="margin-bottom:0.25rem;">Note that the Unity game contains a menu with two buttons (to start or quit), and you should use the same button sounds for both buttons.</li>
 													</ol>
 												</li>
-												<li style="margin-bottom:0.5rem;">The red ball respawns to the launch pad when:
+												<li style="margin-bottom:0.5rem;"><u>Footsteps:</u>
 													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">It hits a blue target capsule.</li>
-														<li style="margin-bottom:0.25rem;">It misses the platforms.</li>
-														<li style="margin-bottom:0.25rem;">More than 10 seconds after the launch has elapsed.</li>
-														<li style="margin-bottom:0.25rem;">There are only 10 shots initially. The game ends once the number of shots reaches 0.</li>
-														</ol>
-												</li>
-												<li style="margin-bottom:0.5rem;">The ball's elevation (degrees 0-89), rotation angle (degrees left -ve or degrees right +ve), and power (0 - 10) should be set before the ball is fired (SPACE BAR).</li>
-												<li style="margin-bottom:0.5rem;">There should be GUI showing the following features:
-													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">Shots left</li>
-														<li style="margin-bottom:0.25rem;">Targets left</li>
-														<li style="margin-bottom:0.25rem;">Elevation angle (in degrees)</li>
-														<li style="margin-bottom:0.25rem;">Horizontal angle (in degrees)</li>
-														<li style="margin-bottom:0.25rem;">Power 0-10</li>
-														<li style="margin-bottom:0.25rem;">A way to exit the game (essential for the executable), i.e. a button or which key to press.</li>
-														</ol>
-												</li>
-												<li style="margin-bottom:0.5rem;">The game can be given a theme, such as cyberpunk, medieval, steampunk, etc using free asset 
-												packs. You can also add VFX and audio FX and music. The basic assets should also be replaced 
-												with free downloadable assets. Please make sure the controls and targets of the game are clearly 
-												explained by a splash screen or list in the GUI.</li>
-
-
-												<li style="margin-bottom:0.5rem;">You must submit the following items for assessment:
-													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">The GDD document (based on the template provided).</li>
-														<li style="margin-bottom:0.25rem;">A 6-minute narrated video demonstrating all features of the game created (.MP4, HD) 
-															video clearly showing each of the various features of the game working and how they 
-															were implemented. Clearly also show and describe any advanced features you have 
-															added.
-														</li>
-														<li style="margin-bottom:0.25rem;">A Windows build of the game (executable)</li>
-														<li style="margin-bottom:0.25rem;">The Unity project game folder (zipped) 
-																(The library folder should not be included. This should be tested on a separate PC from the 
-																one it was created on).
-														</li>
+														Create three footstep sounds, with a separate audio file for three different ground
+														surfaces that the player can walk on that are present in your chosen game environment.
+														Each completed audio file should be edited to contain only one footstep for each ground
+														surface.
+														Make sure to edit the three footstep sounds so they're ready to be implemented in the
+														game environment. This means ensuring a clean start and end point within the audio file.
+														Note that within the game environment, the footsteps should play when the player moves
+														to represent the sound of walking, and the footstep sounds should automatically change
+														to match whichever surface the player is currently walking on.
 													</ol>
 												</li>
+												<li style="margin-bottom:0.5rem;"><u>TWO game event sound effects:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														Create two distinct sound effects to accompany pick-up events for two different
+														collectable items within the game: a health pickup, and a coin pickup.
+														Note that the game environment contains two distinct types of collectible items. When
+														the player collects an individual item the appropriate audio file should play.
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;"><u>A creature sound:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														Select one of the creatures that you can find within your chosen game environment and
+														create a single audio file to represent a sound or range of sounds that the creature could
+														make.
+														The creature sound should last approx. 20 seconds.
+														Note that the creature sound should not be heard throughout the whole environment but
+														should be localised to a small area surrounding the creature and automatically repeat in a
+														loop.
+														There are 6 creatures to choose from in the game environment: Bat, Dragon, Slime
+														Monster, Skeleton, Wolf, Dog or Cat When you have chosen the creature you want to
+														create the sound for you can delete the others from the game environment.
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;"><u>Background ambience:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														Create a single audio file of ambience lasting approximately 60 seconds. This should
+														contain:
+														Background sounds that may originate outside of the immediate environment e.g.
+														wind or distant traffic, and
+														General sounds associated with the immediate environment that should be audible
+														at the same level throughout the environment, e.g. rustling leaves, animal noises,
+														indistinct dialogue, or the sound of general industrial machinery.
+														Note that the ambience sound should be set up within the game environment to start
+														playing when the level opens and automatically repeat in a loop. The volume of the
+														ambience should remain consistent throughout the level
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;"><u>Edited Dialogue:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														Use the dialogue audio clip that has been provided for you. 
+														Edit the dialogue clip to match the script shown below:
+														<br>Troll: I'm sorry your highness, I couldn't do it. Th .. th . they were too powerful. Please, you
+														must believe me, I tried my best.
+														<br>Queen: Enough! You expect me to believe that you gave it your all, that you tried your best?
+														<br>Troll: My . my lady.
+														<br>Queen: HOLD YOUR TONGUE!
+														<br>Troll: (whimpers)
+														<br>Use the tools and effects in Audacity to remove any music or background noise, e.g.
+														the noise reduction and voice isolation tools and/or EQ.
+														<br>Divide the dialogue file into separate files to play the dialogue spoken by one
+														character to be located in one NPC and the dialogue spoken by the other character
+														to be located in the other NPC. 
+														<br>Note that in your game environment, the dialogue loop should not be heard throughout
+														the whole environment but should be localised to a small area surrounding the NPCs and
+														automatically repeat in a loop.
+														<br>There are two pairs of NPCs in the game environment that you can choose to associate
+														the dialogue with (the two Civilians or the Troll and the Demon Doll).  When you have
+														chosen the pair you want to create the sound for you can delete the other pair from the
+														game environment.
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;"><u>Unity Game Environment Integration:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														When you have created the portfolio of sounds, you must integrate your sounds into your
+														chosen Unity game environment.
+														Edit your chosen game environment using the same version of Unity that is available
+														in the Games Labs.
+														Do not create a different project of your own design. You will be marked on the
+														quality of your audio portfolio of sounds applied within the provided Unity game
+														environment and not for any aesthetical modifications to the environment or
+														technical enhancements to the existing functionality.
+														Insert the sounds you created for your portfolio of sounds into the game
+														environment at the appropriate locations.
+														Do not use any other sounds within the game environment other than the sounds
+														from your portfolio of sounds that were created for this assignment.
+
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;"><u>Video demonstration and commentary:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														You must produce a 6-minute video which demonstrates all your portfolio of sounds
+														integrated in your chosen Unity game environment, and explains the range of editing and
+														audio tools that you have used within Audacity and Unity.
+														<br>You must structure the video in the following two sections:
+														<br>1. Video Presentation Walkthrough of the Unity game environment in Play mode.
+														<br>Two minutes showing all the sounds operating in Play Mode, without any spoken
+														commentary.
+														<br>2. Demonstration and Commentary to explain how you created and implemented the
+														portfolio of sounds in Audacity and Unity.
+														<br>Four minutes with spoken commentary that identifies where each sound is embedded in
+														the game environment and summarises and discusses how the sounds were created.
+														<br>You should include screenshots of the Audacity and Unity projects and the settings
+														of the effects applied to the audio clips.
+														<br>Include the following information for each of the required sounds based on the Track
+														Sheet template provided to you.
+														<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+															a. The origin of any source files used in the creation of the sound.
+															<br>b. A list of the editing performed on each track.
+															<br>c. A list of effects (and the settings) applied to each track.
+															<br>d. Comments (including what you intended to achieve by applying each effect).
+														</ol>
+														Suggested structure for the 4-minute commentary section:
+														<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+															a. Menu button clicks (30 seconds)
+															<br>b. Footsteps (45 seconds)
+															<br>c. Pickup events (30 seconds)
+															<br>d. A creature sound (40 seconds)
+															<br>e. Background ambience (45 seconds)
+															<br>f. Dialogue loop sound (30 seconds)
+															<br>g. The Audio sample recorded by yourself (20 seconds)
+														</ol>
+														<br>You are required to submit the 6-minute demonstration and commentary video but not
+														the complete Unity project or the Audacity projects.
+														<br>The video should be encoded using h.264 or h.265 in an MP4 container at a 1080p
+														resolution (1920x1080) and is playable on a standard lab windows installation of VLC.
+													</ol>
+												</li>
+												<li style="margin-bottom:0.5rem;"><u>Audio you have recorded yourself:</u>
+													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+														You do not need to submit all the audio that you record using the Zoom audio recorder (or
+														equivalent device) but you should submit a single WAV or MP3 file containing a sample
+														lasting between 30 and 60 seconds of the audio recorded by yourself.<br>
+														The sample can be compiled from extracts of several different recordings but the audio
+														should not be processed i.e. do not change the volume level, do not add any additional
+														audio layers, do not apply any audio effects.<br>
+														It is not expected that the whole sample will be present in completed portfolio of sounds
+														but at least one section of the sample must be a clip that contributed to one of the
+														portfolio sounds and can be heard in the Unity game environment.<br>
+														Show the following details about the sample recordings as a screen shot in the
+														demonstration video (based on the Recording Details Template supplied to you):
+														<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
+															Timestamp in sample audio file<br>
+															Recording device used<br>
+															Date of recording<br>
+															Location of recording<br>
+															Recorded for which Portfolio sound<br>
+															Used in Portfolio (Y/N)<br>
+													</ol>
+												</li>
+
+												
 											</ol>
 										</div>
                                         
@@ -152,38 +277,27 @@
 							<!-- Video and pdf for GDPL -->
 							<section class="constrained-large">
 								<summary style="font-weight:700;margin-bottom:0.5rem;">Submission</summary>
-
-								<a href="/exe/GDPL-Setup.exe">Install the game here!</a><br><br>
-
-								<iframe src="assets/docs/RM-GDPL-A1-2425.pdf" title="GDPL PDF" style="width:100%;height:70vh;border:1px solid #ddd;">
-									<p>If your browser doesn't support embedded PDFs, <a href="assets/docs/RM-GDPL-A1-2425.pdf">download the PDF</a>.</p>
-								</iframe>
-								<section class="video-container">
-									<iframe src="https://drive.google.com/file/d/16T2Ut8KnKJEVvrNXz0exSZEmLG4SkrdB/preview" width="960" height="540" allow="autoplay"></iframe>
-								</section>
-								
+								ADD WORK HERE
+																
 							</section>
 							<section class="constrained-large">
 								<summary style="font-weight:700;margin-bottom:0.5rem;">Results Summary</summary>
-								<p>On this assignment I received a mark of 76.7/100, which I am very pleased with, as it was my first time using unity. If I were to redo this assignment, I would like to try create a script for the targets to move about on the platform as well as decorate the background area.
+								<p>On this assignment I received a mark of 80/100, which I am very pleased with, as it was my first time editing and creating game audio within Audacity. If I were to redo this assignment, I would like to try add a lot more variation in the footsteps, for different surfaces and materials.
 
 									<summary style="font-weight:700;margin-bottom:0.5rem;">Lecturer Feedback</summary>
-									<u>Implementation of the basic game mechanics. (Mark: 77% - Weighting: 30%)</u><br>
-									You have implemented all the required features, plus some more advanced features like multiple levels, the ball container, etc. Good randomisation of platforms, target, and scenery too.
-									<br><br><u>The quality of the C# scripting,structure and commenting. (Mark: 70% - Weighting: 10%)</u><br>
-									Good coding and excellent commenting. There are places where you could use a loop instead of multiple of the same statements, like in the TreeSpawn() function.
-									<br><br><u>Game environment design, audio and VFX features. (Mark: 67% - Weighting: 30%)</u><br>
-									Good use of custom meshes for the targets, objects, and scenery. Great VFX/audio for the cannon firing effect.
-									<br><br><u>GDD (planning, design and organization). (Mark: 90% - Weighting: 20%)</u><br>
-									Your GDD gives excellent, detailed information about the design, planning, and implementation of your game.
-									<br><br><u>Video structure and communication of information and quality of video and audio. (Mark: 85% - Weighting: 10%)</u><br>
-									Your video shows all the required information about the game and the features you implemented for it. Nice video editing, and great narration throughout.
-									<br><br>Final Mark: 76.7%
+									Overall a very good submission. 
+ 
+									The foot-step sounds are appropriately distinct from one another, but the wood sound could be 
+									more convincing/realistic and the metal sound could possibly be flatter (it sounds as if there is a 
+									hollow resonating body, which works well for the steel drums but less so for the sheet metal). 
+									The attachment of foot-step sounds to additional objects, not limiting this to the minimum object 
+									specified in the brief, is a nice touch, but could be considered somewhat counterproductive, as a 
+									greater variety of different sounds would have been desirable for the additional surfaces, as now it 
+									is a bit repetitive (and ideally the sound should tell players where they are in the level).
+									<br><br>Final Mark: 80%
 
 									<br><br> <summary style="font-weight:700;margin-bottom:0.5rem;">Feedforward Suggestions</summary>
-									(i) Where possible in code, use loops instead of multiple of the same statements.
-									<br>(ii) Experiment with things like animated meshes.
-									<br>(iii) Include more types of VFX (hit effects, etc).
+									(i) Keep up the good work.
 								</p>
 							</section>
 						</div>
