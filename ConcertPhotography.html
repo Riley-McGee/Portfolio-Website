@@ -10,6 +10,15 @@
 		<script type="text/javascript" src="assets/js/darkmode.js" defer></script>
 	</head>
 	<body class="is-preload">
+		<style>
+			/* Responsive text scaling for tiles */
+			.tiles article > a h2 {
+				font-size: clamp(1rem, 4vw, 1.5rem);
+			}
+			.tiles article > a p {
+				font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+			}
+		</style>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -78,29 +87,33 @@
 								<section class="constrained-large">
 									<summary style="font-weight:700;margin-bottom:0.5rem;">Concert Galleries</summary>
 									<div class="grid tiles">
-										article class="style1">
+										<article class="style1">
 										<span class="image">
 											<img src="images/pic05.jpg" alt="Wu-Tang Clan Concert" />
 										</span>
 										<a href="WuTangClanConcert.html">
 											<h2>Wu-Tang Clan - The Final Chamber Tour</h2>
 										</a>
-									</article>
-
-										<article class="style1">
-											<span class="image">
-												<img src="images/comingSoon.jpg" alt="Concert gallery coming soon" />
-											</span>
-											<h2>More Concerts Soon</h2>
-											<p style="padding: 0 1rem 1rem; margin: 0; color: var(--txt-color);">Additional live music galleries will be added here later.</p>
 										</article>
 
 										<article class="style1">
 											<span class="image">
 												<img src="images/comingSoon.jpg" alt="Concert gallery coming soon" />
 											</span>
-											<h2>Archive Space</h2>
-											<p style="padding: 0 1rem 1rem; margin: 0; color: var(--txt-color);">Reserved for future concert work.</p>
+											<a>
+												<h2>More Concerts Soon</h2>
+												<p style="padding: 0 1rem 1rem; margin: 0; color: var(--txt-color);">Additional live music galleries will be added here later.</p>
+											</a>
+										</article>
+
+										<article class="style1">
+											<span class="image">
+												<img src="images/comingSoon.jpg" alt="Concert gallery coming soon" />
+											</span>
+											<a>
+												<h2>Archive Space</h2>
+												<p style="padding: 0 1rem 1rem; margin: 0; color: var(--txt-color);">Reserved for future concert work.</p>
+											</a>
 										</article>
 									</div>
 								</section>
