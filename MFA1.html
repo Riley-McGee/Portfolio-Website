@@ -63,127 +63,86 @@
 					<div id="main">
 						<div class="inner">
 							<p><a href="index.html" class="back-link" aria-label="Back to home">&larr; Home</a></p>
-							<h1>Modelling For Animation (MFA)<br>Assignment 1</h1>
+							<h1>MODELLING FOR ANIMATION (MFA)<br>
+								ASSIGNMENT 1</h1>
 							
+
 							<!-- Brief section -->
 							<section class="brief constrained-large">
 								<summary style="font-weight:700;margin-bottom:0.5rem;">Brief</summary>
 								<div id="brief" aria-readonly="true" tabindex="-1" style="color:var(--txt-color);white-space:normal;padding:0.25rem 0;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
-									Your task is to design and develop a game that is played by firing the red ball at the blue capsule 
-									targets. The blue capsule targets are distributed randomly around the three round levels (there 
-									must be some target capsules on each level). You control the elevation, horizontal angle and 
-									power with which the red ball is fired. When all of the blue targets have been hit or knocked from 
-									the platforms you have won the game. You initially only have 10 shots, however hitting the green 
-									capsules will give you an additional 3 shots. If you run out of shots before eliminating all of the blue 
-									capsules you lose the game.  
-									
-									<br>You will initially design the game using the game design document (GDD) which will include the 
-									concept sketches, a mood board and a block out of the level. You must submit a 6-minute narrated video demonstrating all the features of your game, as well as a windows executable build of the game.
-
-									<br>This assignment is worth 100% if of you overall unit grade.
+									For this assignment, you are required to create a fully modelled 3D cartoon character using Autodesk Maya 2025, following a provided or self‑created model sheet. The character must be an organic humanoid in a neutral A‑Pose or T‑Pose, with clear front and side orthographic views used as reference during modelling.
+									<br>The following steps form the core of the creation process:
+									<br>
+									<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0;">
+										<li style="margin-bottom:0.25rem;">Prepare or adapt a model sheet showing the character in front and side views, ensuring consistency and clarity for use as Maya Image Planes.</li>
+										<li style="margin-bottom:0.25rem;">Block out the character using the Box Modelling technique.</li>
+										<li style="margin-bottom:0.25rem;">Create a complete 3D model that accurately matches the reference, with clean topology, correct edge flow, and appropriate detail for animation.</li>
+									</ol>
+									The character must be modelled entirely in polygons, remain under 10,000 quad faces, include inner‑mouth details, and be constructed as a single combined mesh (excluding rigid parts). A smoothed version of the model must also be included in the final scene. The finished work must be presented in a 360‑frame turntable video showing wireframe on shaded.
+									<br>This assignment is worth 100% of the unit grade.
 								</div>
 							</section>
+
+
+
+
 							<!-- Collapsible Detailed Brief -->
 							<section class="constrained-tight">
 								<details>
 									<summary style="cursor:pointer;font-weight:700;margin-bottom:0.5rem;">Detailed Brief</summary>
 									<div style="margin-top:0.5rem;">
+										For this assignment, you must model a cartoon humanoid character using Autodesk Maya 2025, working from a prepared model sheet that includes front and side orthographic views in a neutral A‑Pose or T‑Pose. The model sheet may be created by you or adapted from an existing design, but it must be suitable for use as reference images inside Maya.
+										<br>The following steps are required as part of the modelling workflow:
+										<br>
+										<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0;">
+											<li style="margin-bottom:0.25rem;">Create or edit a model sheet showing the character in front and side views, ensuring alignment and clarity for accurate modelling.</li>
+											<li style="margin-bottom:0.25rem;">Prepare clean reference images (without guide lines) for Maya Image Planes.</li>
+											<li style="margin-bottom:0.25rem;">Block out the character using the Box Modelling technique, then complete the full model with correct forms, proportions, and detail.</li>
+										</ol>
+										The character must be an organic humanoid with all major anatomical features, including eyes, nose, mouth, ears, hands with fingers, and inner‑mouth elements such as teeth and tongue. The mesh must be entirely polygonal, remain under 10,000 quad faces, and be constructed as a single combined object (except for rigid parts). No floating geometry or open seams are allowed. A smoothed version of the model (1 level) must be included in the final scene and positioned to the right when viewed from the front.
+										<br>This assignment counts for 100% of the unit grade.
+
 										<div id="detailed-brief" aria-readonly="true" tabindex="-1" style="width:100%;min-height:10rem;padding:0.75rem;font-family:inherit;color:var(--txt-color);white-space:normal;user-select:none;-webkit-user-select:none;-ms-user-select:none;pointer-events:none;">
-											<ol style="margin:0 0 0 1.25rem;padding:0 0 0 0;">
-												<li style="margin-bottom:0.5rem;">The assignment is to be completed using the unity game engine. These are the basic features of the game:
-													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">The goal of the game is to hit all blue capsules.</li>
-														<li style="margin-bottom:0.25rem;">The level consists of 3 round platforms that hold the targets positioned at different hights roughly positioned as shown.</li>
-														<li style="margin-bottom:0.25rem;">Blue capsules are targets, and are destroyed by contact with the red ball or falling off the platform.</li>
-														<li style="margin-bottom:0.25rem;">Green capsules give you 3 extra shots when hit by the red ball.</li>
-														<li style="margin-bottom:0.25rem;">Randomly positioned objects also populate the platforms, shown here as white blocks.</li>
-														<li style="margin-bottom:0.25rem;">All objects are subject to physics and can be knocked over.</li>
-														<li style="margin-bottom:0.25rem;">The ball is always fired from the launch pad.</li>
-													</ol>
-												</li>
-												<li style="margin-bottom:0.5rem;">The red ball respawns to the launch pad when:
-													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">It hits a blue target capsule.</li>
-														<li style="margin-bottom:0.25rem;">It misses the platforms.</li>
-														<li style="margin-bottom:0.25rem;">More than 10 seconds after the launch has elapsed.</li>
-														<li style="margin-bottom:0.25rem;">There are only 10 shots initially. The game ends once the number of shots reaches 0.</li>
-														</ol>
-												</li>
-												<li style="margin-bottom:0.5rem;">The ball's elevation (degrees 0-89), rotation angle (degrees left -ve or degrees right +ve), and power (0 - 10) should be set before the ball is fired (SPACE BAR).</li>
-												<li style="margin-bottom:0.5rem;">There should be GUI showing the following features:
-													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">Shots left</li>
-														<li style="margin-bottom:0.25rem;">Targets left</li>
-														<li style="margin-bottom:0.25rem;">Elevation angle (in degrees)</li>
-														<li style="margin-bottom:0.25rem;">Horizontal angle (in degrees)</li>
-														<li style="margin-bottom:0.25rem;">Power 0-10</li>
-														<li style="margin-bottom:0.25rem;">A way to exit the game (essential for the executable), i.e. a button or which key to press.</li>
-														</ol>
-												</li>
-												<li style="margin-bottom:0.5rem;">The game can be given a theme, such as cyberpunk, medieval, steampunk, etc using free asset 
-												packs. You can also add VFX and audio FX and music. The basic assets should also be replaced 
-												with free downloadable assets. Please make sure the controls and targets of the game are clearly 
-												explained by a splash screen or list in the GUI.</li>
-
-
-												<li style="margin-bottom:0.5rem;">You must submit the following items for assessment:
-													<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0 0 0 0;">
-														<li style="margin-bottom:0.25rem;">The GDD document (based on the template provided).</li>
-														<li style="margin-bottom:0.25rem;">A 6-minute narrated video demonstrating all features of the game created (.MP4, HD) 
-															video clearly showing each of the various features of the game working and how they 
-															were implemented. Clearly also show and describe any advanced features you have 
-															added.
-														</li>
-														<li style="margin-bottom:0.25rem;">A Windows build of the game (executable)</li>
-														<li style="margin-bottom:0.25rem;">The Unity project game folder (zipped) 
-																(The library folder should not be included. This should be tested on a separate PC from the 
-																one it was created on).
-														</li>
-													</ol>
-												</li>
+											You must submit the following items for assessment:
+											<ol type="a" style="margin:0.25rem 0 0 1.25rem;padding:0;">
+												<li style="margin-bottom:0.25rem;">A complete Maya 2025 project folder.</li>
+												<li style="margin-bottom:0.25rem;">A blocking‑stage Maya scene file (.ma) containing the character and correctly placed image planes.</li>
+												<li style="margin-bottom:0.25rem;">A final Maya scene file (.ma) containing the fully modelled character, the low‑poly version, the image planes, and a smoothed duplicate positioned on the right.</li>
+												<li style="margin-bottom:0.25rem;">A sourceimages folder containing the original model sheet, any adjusted versions, and the cropped front and side views used as Image Planes.</li>
+												<li style="margin-bottom:0.25rem;">A text file crediting the model sheet’s author (if not self‑created) and describing any AI involvement in the creation or adjustment process.</li>
+												<li style="margin-bottom:0.25rem;">A turntable video (AVI, MS‑CRAM, 1920×1080, 360 frames, ≤200MB) showing the low‑poly model with wireframe on shaded.</li>
+												<li style="margin-bottom:0.25rem;">A single combined polygon mesh (excluding rigid parts), with no floating geometry, no open seams, and deleted history.</li>
+												<li style="margin-bottom:0.25rem;">Topology that uses quads only, with clean edge flow, even distribution of faces, and appropriate density around articulations and creases.</li>
+												<li style="margin-bottom:0.25rem;">A final ZIP file named: <em>surname_firstname_mfa_1_2025</em>.</li>
 											</ol>
 										</div>
-                                        
 									</div>
 								</details>
 							</section>
 
 
-							<!-- Video and pdf for GDPL -->
+
+							<!-- 3D Model embed for MFA1 -->
 							<section class="constrained-large">
 								<summary style="font-weight:700;margin-bottom:0.5rem;">Submission</summary>
-
-								<a href="/exe/GDPL-Setup.exe">Install the game here!</a><br><br>
-
-								<iframe src="assets/docs/RM-GDPL-A1-2425.pdf" title="GDPL PDF" style="width:100%;height:70vh;border:1px solid #ddd;">
-									<p>If your browser doesn't support embedded PDFs, <a href="assets/docs/RM-GDPL-A1-2425.pdf">download the PDF</a>.</p>
-								</iframe>
-								<section class="video-container">
-									<iframe src="https://drive.google.com/file/d/16T2Ut8KnKJEVvrNXz0exSZEmLG4SkrdB/preview" width="960" height="540" allow="autoplay"></iframe>
-								</section>
+								<div class="inner">
+<div class="sketchfab-embed-wrapper"> <iframe title="MFA-Assignment-1" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="540" src="https://sketchfab.com/models/3626f97e1f39423e8bc7a050be56a019/embed"> </iframe> </div>
 								
+								</section>
 							</section>
+							<!-- Results Summary -->
 							<section class="constrained-large">
 								<summary style="font-weight:700;margin-bottom:0.5rem;">Results Summary</summary>
-								<p>On this assignment I received a mark of 76.7/100, which I am very pleased with, as it was my first time using unity. If I were to redo this assignment, I would like to try create a script for the targets to move about on the platform as well as decorate the background area.
+								<p>On this assignment I received a mark of 75/100, which I am pleased with, as it was my first time creating a 3D model of a character from scratch. If I were to redo this assignment, I would try to focus more on creating a more human-like character as this is where I lost most of my marks.<br>Unfotunately, there were some issues with the marking of this assignment, as a result I didn't receive any detailed feedback in the marking criteria, however I set up a meeting with my lecturers to cover the feedback. I had spent some time with my lecturers trying to obtain proper feedback on this assignment, and seeked out to have it remarked, however we did not have much success. I am still very happy with a mark of 75 however, and I have learnt a lot from this process.
 
-									<summary style="font-weight:700;margin-bottom:0.5rem;">Lecturer Feedback</summary>
-									<u>Implementation of the basic game mechanics. (Mark: 77% - Weighting: 30%)</u><br>
-									You have implemented all the required features, plus some more advanced features like multiple levels, the ball container, etc. Good randomisation of platforms, target, and scenery too.
-									<br><br><u>The quality of the C# scripting,structure and commenting. (Mark: 70% - Weighting: 10%)</u><br>
-									Good coding and excellent commenting. There are places where you could use a loop instead of multiple of the same statements, like in the TreeSpawn() function.
-									<br><br><u>Game environment design, audio and VFX features. (Mark: 67% - Weighting: 30%)</u><br>
-									Good use of custom meshes for the targets, objects, and scenery. Great VFX/audio for the cannon firing effect.
-									<br><br><u>GDD (planning, design and organization). (Mark: 90% - Weighting: 20%)</u><br>
-									Your GDD gives excellent, detailed information about the design, planning, and implementation of your game.
-									<br><br><u>Video structure and communication of information and quality of video and audio. (Mark: 85% - Weighting: 10%)</u><br>
-									Your video shows all the required information about the game and the features you implemented for it. Nice video editing, and great narration throughout.
-									<br><br>Final Mark: 76.7%
+									<summary style="font-weight:700;margin-bottom:0.5rem;">Lecturer Feedback:</summary>
+									The character reads clearly against the model sheet, with a good match in overall silhouette, clothing breaks, and proportions. Some forms drift from the reference, particularly the head shape and facial feature treatment, which reduces accuracy in the most visible area. Secondary shaping remains simplified in places, which limits likeness and character definition.<br>Edge flow is generally clean and quad-based, with sensible distribution across the body and strong articulation work in the hand. Facial topology is less convincing, such as the chin and jaw, with loop structure that does not consistently support natural deformation around. <br>The turntable is clear and well framed, which supports assessment of form and topology. The Maya scene is well presented and the workspace generally aligns with the demands made by the brief. <br>Overall Feedback: A good character model with clear presentation and generally sound topology, suitable for animation. Fidelity to the reference is good at the macro level, but facial form and facial looping reduce deformation readiness and likeness. 
+									<br><br>Feedback Images:
 
-									<br><br> <summary style="font-weight:700;margin-bottom:0.5rem;">Feedforward Suggestions</summary>
-									(i) Where possible in code, use loops instead of multiple of the same statements.
-									<br>(ii) Experiment with things like animated meshes.
-									<br>(iii) Include more types of VFX (hit effects, etc).
+									<span class="image">
+										<img src="images/MFA1-Feedback.png" width="100%" alt="MFA1 Feedback - References" />
+									</span>
 								</p>
 							</section>
 						</div>
@@ -192,7 +151,6 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-
 							<section>
 								<h2>Get in touch:</h2>
 								<ul class="icons">
