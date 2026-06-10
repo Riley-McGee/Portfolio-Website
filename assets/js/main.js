@@ -7,7 +7,33 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body');
+		$body = $('body'),
+		transitionDelay = 350;
+
+	function shouldTransition(href, link) {
+
+		if (!href || href.charAt(0) === '#')
+			return false;
+
+		if (link.target === '_blank' || link.hasAttribute('download'))
+			return false;
+
+		if (/^(mailto:|tel:|javascript:)/i.test(href))
+			return false;
+
+		return link.protocol === window.location.protocol && link.host === window.location.host;
+
+	}
+
+	function transitionTo(href) {
+
+		$body.addClass('is-transitioning');
+
+		window.setTimeout(function() {
+			window.location.href = href;
+		}, transitionDelay);
+
+	}
 
 	// Breakpoints.
 		breakpoints({
@@ -151,12 +177,25 @@
 					if (href == '#menu')
 						return;
 
-					window.setTimeout(function() {
-						window.location.href = href;
-					}, 350);
+					transitionTo(href);
 
 			})
 			.append('<a class="close" href="#menu">Close</a>');
+
+	$body.on('click', 'a[href]', function(event) {
+
+		var link = this,
+			href = $(this).attr('href');
+
+		if (!shouldTransition(href, link))
+			return;
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		transitionTo(href);
+
+	});
 
 		$body
 			.on('click', 'a[href="#menu"]', function(event) {
