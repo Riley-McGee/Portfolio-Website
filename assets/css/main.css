@@ -27,7 +27,7 @@ body[data-color-scheme="dark"],
 	--icon-style-hover: #ffffff;
 }
 
-body[data-color-scheme="blue"] {
+body[data-color-scheme="ocean"] {
 	--bg-color: #0e2749;
 	--txt-color: #e7f2ff;
 	--hover-color: #9ec5f8;
