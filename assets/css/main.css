@@ -3,8 +3,8 @@
 
 :root {
 	--bg-color: #ffffff;
-	--txt-color: #585858;
-	--hover-color: #b8b8b8;
+	--txt-color: #3b3b3b;
+	--hover-color: #7f7f7f;
 	--menu-border-color: #383838;
 	--featured-badge: #34a4ff;
 	--uni-proj-badge: #1cbb29;
@@ -13,17 +13,57 @@
 	--icon-style-border: #c9c9c9;
 	--icon-style-hover: #383838;
 }
+body[data-color-scheme="dark"],
 .darkmode{
-	--bg-color: #3e3e3e;
+	--bg-color: #1f2023;
 	--txt-color: #ffffff;
-	--hover-color: #b8b8b8;
-	--menu-border-color: #383838;
-	--featured-badge: #004e8d;
-	--uni-proj-badge: #008d00;
-	--bg-tiles:rgba(0, 0, 0, 0.35);
-	--footer-bg: #2d2d30;
-	--icon-style-border: #c9c9c9;
-	--icon-style-hover: #383838;
+	--hover-color: #b5bbc7;
+	--menu-border-color: #5f6570;
+	--featured-badge: #2f90ff;
+	--uni-proj-badge: #1cbb29;
+	--bg-tiles: rgba(8, 13, 20, 0.58);
+	--footer-bg: #16171a;
+	--icon-style-border: #8e97a8;
+	--icon-style-hover: #ffffff;
+}
+
+body[data-color-scheme="blue"] {
+	--bg-color: #0e2749;
+	--txt-color: #e7f2ff;
+	--hover-color: #9ec5f8;
+	--menu-border-color: #5ca3ff;
+	--featured-badge: #58b9ff;
+	--uni-proj-badge: #1cbb29;
+	--bg-tiles: rgba(9, 89, 184, 0.48);
+	--footer-bg: #081a32;
+	--icon-style-border: #8fc0ff;
+	--icon-style-hover: #ffffff;
+}
+
+body[data-color-scheme="forest"] {
+	--bg-color: #16291e;
+	--txt-color: #e9f6eb;
+	--hover-color: #a9d0b0;
+	--menu-border-color: #77c08b;
+	--featured-badge: #38bf73;
+	--uni-proj-badge: #1cbb29;
+	--bg-tiles: rgba(41, 117, 67, 0.44);
+	--footer-bg: #0d1912;
+	--icon-style-border: #89cf9e;
+	--icon-style-hover: #ffffff;
+}
+
+body[data-color-scheme="sunset"] {
+	--bg-color: #442216;
+	--txt-color: #ffeede;
+	--hover-color: #ffb58a;
+	--menu-border-color: #ff9960;
+	--featured-badge: #ff7c43;
+	--uni-proj-badge: #1cbb29;
+	--bg-tiles: rgba(179, 76, 21, 0.42);
+	--footer-bg: #2a140c;
+	--icon-style-border: #ffb07e;
+	--icon-style-hover: #ffffff;
 }
 
 #theme-switch {
@@ -42,22 +82,93 @@
 	top: 10px; /* bring to the very top */
 	left: 80px; /* swapped: place theme switch to the right */
 	z-index: 9999; /* ensure nothing overlaps */
+	display: none;
 }
 #theme-switch svg {
 	position: absolute;
 	fill: var(--txt-color);
 	stroke: var(--txt-color);
 }
-#theme-switch svg:last-child {
+
+#theme-selector-wrap {
+	position: fixed;
+	top: 10px;
+	left: 80px;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	height: 50px;
+	padding: 0 0.65rem;
+	border-radius: 999px;
+	background: var(--bg-color);
+	border: 1px solid var(--icon-style-border);
+	box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+	transition: border-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+#theme-selector-wrap::after {
+	content: '';
+	position: absolute;
+	right: 0.85rem;
+	top: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-right: 2px solid var(--txt-color);
+	border-bottom: 2px solid var(--txt-color);
+	transform: translateY(-62%) rotate(45deg);
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+#theme-selector-wrap label {
+	margin: 0;
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--txt-color);
+}
+
+#theme-selector {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 0;
+	border-radius: 0;
+	height: 100%;
+	padding: 0 2rem 0 0.2rem;
+	background: transparent;
+	color: var(--txt-color);
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: 1;
+	min-width: 7.5rem;
+	cursor: pointer;
+}
+
+#theme-selector-wrap:hover {
+	border-color: var(--icon-style-hover);
+	transform: translateY(-2px);
+}
+
+#theme-selector:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+#theme-selector:focus-visible {
+	outline: none;
+	box-shadow: none;
+}
+
+#theme-selector::-ms-expand {
 	display: none;
 }
 
-.darkmode #theme-switch svg:first-child {
-	display: none;
-}
-
-.darkmode #theme-switch svg:last-child {
-	display: block;
+#theme-selector-wrap:focus-within {
+	border-color: var(--icon-style-hover);
+	box-shadow: 0 0 0 3px rgba(52,164,255,0.12), 0 6px 14px rgba(0,0,0,0.10);
 }
 
 /* Home button styling - sits beside the theme switch */
@@ -96,6 +207,20 @@
 	outline: none;
 	box-shadow: 0 0 0 3px rgba(52,164,255,0.12), 0 6px 14px rgba(0,0,0,0.10);
 	transform: translateY(-2px);
+}
+
+@media screen and (max-width: 736px) {
+	#theme-selector-wrap {
+		left: auto;
+		right: 12px;
+		top: 70px;
+		height: 44px;
+		padding: 0 0.55rem;
+	}
+
+	#theme-selector-wrap label {
+		display: none;
+	}
 }
 
 /* Underline the "About Me" title link on the home page only on hover */
